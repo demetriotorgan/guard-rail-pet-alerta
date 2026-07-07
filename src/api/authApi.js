@@ -16,6 +16,6 @@ export async function authMe(){
 }
 
 export async function cadastrarUsuario(userData) {
-    const { data } = await api.post("/register", userData);
+    const { data } = await api.post("/auth/register", userData);
     return data;
 }

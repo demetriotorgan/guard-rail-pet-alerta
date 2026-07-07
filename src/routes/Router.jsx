@@ -5,6 +5,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from '../pages/Login'
 import PrivateRoute from './PrivateRoute'
 import Home from '../pages/Home'
+import Usuario from '../components/Usuario'
+import AprovarPet from '../components/AprovarPet'
+import ListarPets from '../components/ListarPets'
+import EstadosPets from '../components/EstadosPets'
 
 const Router = () => {
     return (
@@ -21,7 +25,10 @@ const Router = () => {
                         </PrivateRoute>
                     }>
                         <Route index element={<Home />} />
-                        {/* <Route path='pets' element={<Pets />} /> */}
+                        <Route path='novo' element={<Usuario />} />
+                        <Route path='aprovar' element={<AprovarPet />} />
+                        <Route path='pets' element={<ListarPets />} />
+                        <Route path='estados' element={<EstadosPets />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
