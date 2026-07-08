@@ -19,3 +19,12 @@ export async function cadastrarUsuario(userData) {
     const { data } = await api.post("/auth/register", userData);
     return data;
 }
+
+export async function listarUsuarios(){
+    const {data} = await api.get('/auth/usuarios');    
+    return data
+}
+
+export async function deletarUsuario(id){
+    const {data} = await api.delete(`/auth/${id}/deletar`);
+}
