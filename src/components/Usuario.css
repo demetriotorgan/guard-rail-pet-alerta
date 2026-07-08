@@ -1,4 +1,10 @@
 /* src/components/Usuario.css */
+
+/* 1. Reset para todos elementos do componente */
+.usuario-page * {
+    box-sizing: border-box;
+}
+
 .usuario-page {
     padding: var(--spacing-md);
     font-family: var(--font-main);
@@ -41,9 +47,10 @@
     color: var(--primary);
 }
 
-.usuario-form {
+.usuario-form { /* estava certo */
+    width: 100%;
     background: var(--white);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-lg); /* Aumenta de 10px pra ficar melhor */
     border-radius: var(--radius-lg);
     border: 1px solid var(--light);
 }
@@ -69,6 +76,7 @@
     font-size: 1rem;
     font-family: var(--font-main);
     transition: all 0.2s;
+    box-sizing: border-box; /* 2. Garante que padding não vaze */
 }
 
 .form-group input:focus,
@@ -119,6 +127,7 @@
     width: 18px;
     height: 18px;
     cursor: pointer;
+    box-sizing: content-box; /* checkbox não precisa de border-box */
 }
 
 .form-actions {
@@ -138,6 +147,7 @@
     transition: all 0.2s;
     border: none;
     font-family: var(--font-main);
+    box-sizing: border-box; /* 3. Botões também */
 }
 
 .btn-cancelar {

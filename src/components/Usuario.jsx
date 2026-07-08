@@ -127,7 +127,7 @@ const Usuario = () => {
                         placeholder="Nome completo"
                         disabled={loading}
                         className={errors.nome? 'input-error' : ''}
-                        maxLength={80}
+                        
                     />
                     {errors.nome && <span className="error-text">{errors.nome}</span>}
                 </div>
